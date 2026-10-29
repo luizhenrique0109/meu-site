@@ -1,119 +1,69 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description" content="Acesse sua conta no Mercado-LGPD.">
-
     <title>Login | Mercado-LGPD</title>
 
     <link rel="stylesheet" href="./style.css">
 </head>
-
 <body>
-    <main class="container">
-        <section class="cadastro-card">
 
-            <header class="cabecalho">
-                <div class="logo" aria-hidden="true">M</div>
+    <main class="login-container">
+        <h1>Mercado-LGPD</h1>
+        <h2>Entrar na sua conta</h2>
 
-                <h1>Bem-vindo de volta!</h1>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Digite seu e-mail"
+                    autocomplete="email"
+                    required
+                >
+            </div>
 
-                <p>
-                    Entre na sua conta para continuar
-                    usando o Mercado-LGPD.
-                </p>
-            </header>
+            <div class="form-group">
+                <label for="senha">Senha</label>
+                <input
+                    type="password"
+                    id="senha"
+                    name="senha"
+                    placeholder="Digite sua senha"
+                    autocomplete="current-password"
+                    required
+                >
+            </div>
 
-            <form id="loginForm">
-                <div class="campo">
-                    <label for="email">E-mail *</label>
+            <button type="submit">Entrar</button>
+        </form>
 
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="seuemail@exemplo.com"
-                        autocomplete="email"
-                        maxlength="254"
-                        required
-                    >
-                </div>
+        <p id="mensagem" role="status"></p>
 
-                <div class="campo">
-                    <label for="senha">Senha *</label>
+        <nav class="login-links">
+            <a href="https://luizhenrique0109.github.io/meu-site/cadastro.html">
+                Criar minha conta
+            </a>
 
-                    <input
-                        type="password"
-                        id="senha"
-                        name="senha"
-                        placeholder="Digite sua senha"
-                        autocomplete="current-password"
-                        required
-                    >
-                </div>
+            <a href="https://luizhenrique0109.github.io/meu-site/cadastro.html">
+                Recuperar acesso
+            </a>
 
-                <label class="opcao" for="lembrar">
-                    <input
-                        type="checkbox"
-                        id="lembrar"
-                        name="lembrar"
-                    >
+            <a href="https://luizhenrique0109.github.io/meu-site/privacidade.html">
+                Política de Privacidade
+            </a>
 
-                    <span>Lembrar de mim neste dispositivo.</span>
-                </label>
-
-                <div class="separador"></div>
-
-                <p
-                    id="mensagem"
-                    class="mensagem"
-                    role="status"
-                    aria-live="polite"
-                ></p>
-
-                <button type="submit" id="btnLogin">
-                    Entrar na minha conta
-                </button>
-
-                <footer class="rodape">
-                    <p>
-                        Esqueceu sua senha?
-                        <a href="./cadastro.html">
-                            Recuperar acesso
-                        </a>
-                    </p>
-
-                    <p style="margin-top: 16px;">
-                        Ainda não tem uma conta?
-                        <a href="./cadastro.html">
-                            Criar minha conta
-                        </a>
-                    </p>
-
-                    <div class="separador"></div>
-
-                    <p>Respeitamos sua privacidade.</p>
-
-                    <p style="margin-top: 10px;">
-                        <a href="./privacidade.html">
-                            Política de Privacidade
-                        </a>
-                    </p>
-
-                    <p style="margin-top: 10px;">
-                        <a href="./termos.html">
-                            Termos de Uso
-                        </a>
-                    </p>
-                </footer>
-            </form>
-        </section>
+            <a href="https://luizhenrique0109.github.io/meu-site/termos.html">
+                Termos de Uso
+            </a>
+        </nav>
     </main>
 
     <script>
-        // Demonstração visual: não realiza login real.
         const formulario = document.getElementById("loginForm");
         const mensagem = document.getElementById("mensagem");
 
@@ -121,10 +71,9 @@
             event.preventDefault();
 
             mensagem.textContent =
-                "Este é um site de demonstração. O login ainda não está conectado a um servidor.";
-
-            mensagem.className = "mensagem erro";
+                "Demonstração: o login ainda precisa de um servidor para autenticação.";
         });
     </script>
+
 </body>
 </html>
