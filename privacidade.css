@@ -1,0 +1,471 @@
+
+/* =========================================
+   CONFIGURAÇÕES GERAIS
+========================================= */
+:root {
+    --verde: #0c22a0;
+    --verde-escuro: #102066;
+    --fundo: #f3f6f4;
+    --texto: #202923;
+    --cinza: #68736c;
+    --borda: #dce4de;
+    --erro: #c62828;
+    --branco: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--fundo);
+    color: var(--texto);
+    min-height: 100vh;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+/* =========================================
+   CONTAINER PRINCIPAL
+========================================= */
+.container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 35px 4%;
+    display: block;
+}
+
+/* =========================================
+   CARTÃO DA POLÍTICA
+========================================= */
+.cadastro-card {
+    background: var(--branco);
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 55px 7%;
+    border-radius: 16px;
+    box-shadow: 0 8px 35px rgba(20, 55, 32, 0.07);
+}
+
+.politica-card {
+    max-width: 1600px;
+}
+
+/* =========================================
+   CABEÇALHO
+========================================= */
+.cabecalho {
+    text-align: center;
+    margin-bottom: 45px;
+    padding-bottom: 35px;
+    border-bottom: 1px solid var(--borda);
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    background: var(--verde);
+    color: white;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0 auto 22px;
+    box-shadow: 0 6px 18px rgba(12, 34, 160, 0.2);
+}
+
+.cabecalho h1 {
+    font-size: clamp(30px, 3vw, 44px);
+    line-height: 1.25;
+    margin-bottom: 16px;
+    color: var(--texto);
+    letter-spacing: -0.8px;
+}
+
+.cabecalho p {
+    color: var(--cinza);
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.cabecalho .data-atualizacao {
+    margin-top: 14px;
+    font-size: 14px;
+    color: var(--cinza);
+}
+
+/* =========================================
+   AVISOS
+========================================= */
+.aviso {
+    background: #eef1ff;
+    border-left: 5px solid var(--verde);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-bottom: 35px;
+    color: #263568;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.aviso-pequeno {
+    background: #f7f8fc;
+    border-left: 3px solid var(--borda);
+    padding: 14px 18px;
+    margin-top: 22px;
+    color: var(--cinza);
+    font-size: 14px;
+}
+
+/* =========================================
+   ÍNDICE DE NAVEGAÇÃO
+========================================= */
+.indice {
+    background: #f8f9ff;
+    border: 1px solid #e1e5f5;
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-bottom: 45px;
+}
+
+.indice h2 {
+    color: var(--verde);
+    font-size: 21px;
+    margin-bottom: 18px;
+}
+
+.indice ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px 35px;
+}
+
+.indice li {
+    border-bottom: 1px solid #e8eaf4;
+    padding: 8px 0;
+}
+
+.indice a {
+    color: var(--verde);
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.indice a:hover {
+    color: var(--verde-escuro);
+    text-decoration: underline;
+}
+
+/* =========================================
+   SEÇÕES DE CONTEÚDO
+========================================= */
+.secao {
+    margin-bottom: 42px;
+    padding-bottom: 35px;
+    border-bottom: 1px solid #e9eeea;
+    scroll-margin-top: 25px;
+}
+
+.secao:last-of-type {
+    border-bottom: none;
+}
+
+.secao h2 {
+    color: var(--verde);
+    font-size: clamp(23px, 2vw, 29px);
+    line-height: 1.4;
+    margin-bottom: 22px;
+    padding-left: 16px;
+    border-left: 5px solid var(--verde);
+}
+
+.secao h3 {
+    color: var(--texto);
+    font-size: 20px;
+    margin: 28px 0 12px;
+}
+
+.secao p {
+    font-size: 17px;
+    line-height: 1.95;
+    color: #414a44;
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+.secao ul {
+    padding-left: 30px;
+    margin: 15px 0 25px;
+}
+
+.secao li {
+    font-size: 16px;
+    line-height: 1.9;
+    color: #414a44;
+    margin-bottom: 12px;
+    padding-left: 5px;
+}
+
+.secao li::marker {
+    color: var(--verde);
+}
+
+.secao strong {
+    color: #202923;
+}
+
+.secao a {
+    color: var(--verde);
+    font-weight: 600;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.secao a:hover {
+    text-decoration: underline;
+}
+
+/* =========================================
+   LISTA DE CONTATOS
+========================================= */
+.contato-lista {
+    list-style-type: none;
+    padding: 0 !important;
+    background: #f8f9ff;
+    border: 1px solid #e1e5f5;
+    border-radius: 10px;
+    padding: 20px 25px !important;
+}
+
+.contato-lista li {
+    padding: 12px 5px;
+    margin: 0;
+    border-bottom: 1px solid #e5e8f2;
+    overflow-wrap: anywhere;
+}
+
+.contato-lista li:last-child {
+    border-bottom: none;
+}
+
+/* =========================================
+   BOTÕES
+========================================= */
+.acoes {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 35px;
+    padding-top: 30px;
+    border-top: 1px solid var(--borda);
+}
+
+.acoes button {
+    min-height: 50px;
+    padding: 13px 24px;
+    border: none;
+    border-radius: 8px;
+    background: var(--verde);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.acoes button:hover {
+    background: var(--verde-escuro);
+    transform: translateY(-2px);
+}
+
+.acoes .botao-secundario {
+    background: #eef1ff;
+    color: var(--verde);
+    border: 1px solid #d8defa;
+}
+
+.acoes .botao-secundario:hover {
+    background: #e1e6ff;
+}
+
+/* =========================================
+   RODAPÉ
+========================================= */
+.rodape {
+    text-align: center;
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 1px solid var(--borda);
+    color: var(--cinza);
+    font-size: 14px;
+}
+
+/* =========================================
+   ACESSIBILIDADE
+========================================= */
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #8193ff;
+    outline-offset: 4px;
+}
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+@media (max-width: 900px) {
+    .container {
+        padding: 20px 3%;
+    }
+
+    .cadastro-card {
+        padding: 38px 5%;
+    }
+
+    .indice ul {
+        grid-template-columns: 1fr;
+    }
+
+    .secao p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 15px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .cadastro-card {
+        padding: 25px 18px;
+        border-radius: 10px;
+    }
+
+    .cabecalho {
+        margin-bottom: 30px;
+        padding-bottom: 25px;
+    }
+
+    .cabecalho h1 {
+        font-size: 28px;
+    }
+
+    .cabecalho p {
+        font-size: 15px;
+    }
+
+    .logo {
+        width: 58px;
+        height: 58px;
+        font-size: 30px;
+    }
+
+    .aviso {
+        padding: 16px;
+        font-size: 14px;
+    }
+
+    .indice {
+        padding: 20px 17px;
+        margin-bottom: 32px;
+    }
+
+    .indice h2 {
+        font-size: 19px;
+    }
+
+    .indice a {
+        font-size: 14px;
+    }
+
+    .secao {
+        margin-bottom: 30px;
+        padding-bottom: 25px;
+    }
+
+    .secao h2 {
+        font-size: 22px;
+        padding-left: 12px;
+    }
+
+    .secao h3 {
+        font-size: 18px;
+    }
+
+    .secao p,
+    .secao li {
+        font-size: 15px;
+        line-height: 1.85;
+    }
+
+    .secao ul {
+        padding-left: 23px;
+    }
+
+    .acoes {
+        flex-direction: column;
+    }
+
+    .acoes button {
+        width: 100%;
+    }
+
+    .contato-lista {
+        padding: 12px !important;
+    }
+}
+
+/* =========================================
+   IMPRESSÃO E PDF
+========================================= */
+@media print {
+    body {
+        background: white;
+        color: black;
+        font-size: 12pt;
+    }
+
+    .container {
+        padding: 0;
+    }
+
+    .cadastro-card {
+        max-width: none;
+        padding: 0;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .acoes,
+    .indice {
+        display: none;
+    }
+
+    .secao {
+        break-inside: avoid;
+        border-color: #ddd;
+    }
+
+    .secao h2 {
+        color: black;
+        border-color: #555;
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+    }
+}

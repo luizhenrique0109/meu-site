@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <main class="container">
+        <section class="cadastro-card">
+            <header class="cabecalho">
+                <div class="logo">M</div>
+                <h1>Criar conta</h1>
+                <p>Cadastre-se para comprar no Mercado LGPD.</p>
+            </header>
+
+            <form id="formCadastro">
+                <div class="campo">
+                    <label for="nome">Nome completo *</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" autocomplete="name"
+                        maxlength="150" required>
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail *</label>
+                    <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" autocomplete="email"
+                        maxlength="254" required>
+                </div>
+
+                <div class="campo">
+                    <label for="senha">Senha *</label>
+                    <input type="password" id="senha" name="senha" placeholder="Mínimo de 8 caracteres"
+                        autocomplete="new-password" minlength="8" required>
+                    <small>
+                        Use pelo menos 8 caracteres, incluindo letras e números.
+                    </small>
+                </div>
+
+                <div class="campo">
+                    <label for="nascimento">Data de nascimento *</label>
+                    <input type="date" id="nascimento" name="dataNascimento" autocomplete="bday" required>
+                </div>
+
+                <div class="campo">
+                    <label for="celular">Celular (opcional)</label>
+                    <input type="tel" id="celular" name="celular" placeholder="(67) 99999-9999" autocomplete="tel"
+                        maxlength="20">
+                </div>
+
+                <div class="campo">
+                    <label for="cpf">CPF (opcional)</label>
+                    <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" inputmode="numeric"
+                        autocomplete="off" maxlength="14" aria-describedby="ajudaCpf">
+                    <small id="ajudaCpf">
+                        Utilizado somente para emissão de nota fiscal.
+                    </small>
+                </div>
+
+                <div class="separador"></div>
+
+                <fieldset class="consentimentos">
+                    <legend>Termos e preferências</legend>
+
+                    <label class="opcao">
+                        <input type="checkbox" id="aceiteTermos" name="aceiteTermos" required>
+                        <span>
+                            Li e aceito os
+                            <a href="termos.html" target="_blank" rel="noopener">
+                                Termos de Uso
+                            </a>
+                            e a
+                            <a href="privacidade.html" target="_blank" rel="noopener">
+                                Política de Privacidade
+                            </a>.
+                            <strong>*</strong>
+                        </span>
+                    </label>
+
+                    <label class="opcao">
+                        <input type="checkbox" id="ofertasEmail" name="ofertasEmail">
+                        <span>
+                            Aceito receber ofertas e promoções por e-mail.
+                            <small>Opcional.</small>
+                        </span>
+                    </label>
+
+                    <label class="opcao">
+                        <input type="checkbox" id="ofertasWhatsApp" name="ofertasWhatsApp">
+                        <span>
+                            Aceito receber ofertas e promoções por WhatsApp.
+                            <small>Opcional.</small>
+                        </span>
+                    </label>
+                </fieldset>
+
+                <p id="mensagem" class="mensagem" role="status" aria-live="polite"></p>
+
+                <button type="submit" id="btnCadastrar">
+                    Criar minha conta
+                </button>
+
+                <p class="rodape">
+                    Já possui uma conta?
+                    <a href="login.html">Fazer login</a>
+                </p>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>

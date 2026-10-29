@@ -1,0 +1,247 @@
+/* Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --verde: #0c22a0;
+    --verde-escuro: #102066;
+    --fundo: #f3f6f4;
+    --texto: #202923;
+    --cinza: #68736c;
+    --borda: #dce4de;
+    --erro: #c62828;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--fundo);
+    color: var(--texto);
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 16px;
+}
+
+.cadastro-card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 540px;
+    padding: 36px;
+    border-radius: 16px;
+    box-shadow: 0 8px 35px rgba(20, 55, 32, 0.09);
+}
+
+.cabecalho {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 56px;
+    height: 56px;
+    background: var(--verde);
+    color: white;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0 auto 16px;
+}
+
+.cabecalho h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.cabecalho p {
+    color: var(--cinza);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Campos do formulário */
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 19px;
+}
+
+.campo label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.campo input {
+    width: 100%;
+    min-height: 46px;
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 15px;
+    color: var(--texto);
+    background: #fff;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.campo input:focus {
+    border-color: var(--verde);
+    box-shadow: 0 0 0 3px rgba(22, 131, 74, 0.12);
+}
+
+.campo input::placeholder {
+    color: #9aa39d;
+}
+
+.campo small {
+    margin-top: 7px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--cinza);
+}
+
+.separador {
+    height: 1px;
+    background: #e9eeea;
+    margin: 24px 0;
+}
+
+/* Termos e consentimentos */
+.consentimentos {
+    border: none;
+    margin-bottom: 22px;
+}
+
+.consentimentos legend {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.opcao {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    margin-bottom: 17px;
+    font-size: 13px;
+    line-height: 1.6;
+    cursor: pointer;
+}
+
+.opcao input {
+    width: 17px;
+    height: 17px;
+    margin-top: 3px;
+    flex-shrink: 0;
+    accent-color: var(--verde);
+    cursor: pointer;
+}
+
+.opcao span {
+    flex: 1;
+}
+
+.opcao a,
+.rodape a {
+    color: var(--verde);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.opcao a:hover,
+.rodape a:hover {
+    text-decoration: underline;
+}
+
+.opcao strong {
+    color: var(--erro);
+}
+
+.opcao small {
+    display: block;
+    color: var(--cinza);
+    font-size: 12px;
+}
+
+/* Botão principal */
+button[type="submit"] {
+    width: 100%;
+    min-height: 48px;
+    border: none;
+    border-radius: 8px;
+    background: var(--verde);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+    background: var(--verde-escuro);
+}
+
+button[type="submit"]:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+/* Mensagens */
+.mensagem {
+    display: none;
+    margin: 0 0 18px;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.mensagem.erro {
+    display: block;
+    color: #9e2020;
+    background: #fff0f0;
+    border: 1px solid #f3cccc;
+}
+
+.mensagem.sucesso {
+    display: block;
+    color: #176b39;
+    background: #edf9f0;
+    border: 1px solid #ccebd4;
+}
+
+.rodape {
+    text-align: center;
+    margin-top: 23px;
+    color: var(--cinza);
+    font-size: 14px;
+}
+
+/* Adaptação para telas pequenas */
+@media (max-width: 600px) {
+    .container {
+        padding: 16px 10px;
+        align-items: flex-start;
+    }
+
+    .cadastro-card {
+        padding: 24px 18px;
+        border-radius: 12px;
+    }
+
+    .cabecalho h1 {
+        font-size: 24px;
+    }
+}

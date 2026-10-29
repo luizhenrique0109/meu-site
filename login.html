@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Acesse sua conta no Mercado-LGPD.">
+
+    <title>Login | Mercado-LGPD</title>
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <main class="container">
+        <section class="cadastro-card">
+
+            <header class="cabecalho">
+                <div class="logo" aria-hidden="true">M</div>
+
+                <h1>Bem-vindo de volta!</h1>
+
+                <p>
+                    Entre na sua conta para continuar
+                    usando o Mercado-LGPD.
+                </p>
+            </header>
+
+            <form id="loginForm" action="/api/login" method="POST">
+
+                <div class="campo">
+                    <label for="email">E-mail *</label>
+
+                    <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" autocomplete="email"
+                        maxlength="254" required>
+                </div>
+
+                <div class="campo">
+                    <label for="senha">Senha *</label>
+
+                    <input type="password" id="senha" name="senha" placeholder="Digite sua senha"
+                        autocomplete="current-password" required>
+                </div>
+
+                <label class="opcao" for="lembrar">
+                    <input type="checkbox" id="lembrar" name="lembrar">
+
+                    <span>Lembrar de mim neste dispositivo.</span>
+                </label>
+
+                <div class="separador"></div>
+
+                <p id="mensagem" class="mensagem" role="status" aria-live="polite"></p>
+
+                <button type="submit" id="btnLogin">
+                    Entrar na minha conta
+                </button>
+
+                <footer class="rodape">
+
+                    <p>
+                        Esqueceu sua senha?
+                        <a href="/recuperar-senha.html">
+                            Recuperar acesso
+                        </a>
+                    </p>
+
+                    <p style="margin-top: 16px;">
+                        Ainda não tem uma conta?
+                        <a href="/cadastro.html">
+                            Criar minha conta
+                        </a>
+                    </p>
+
+                    <div class="separador"></div>
+
+                    <p>
+                        Respeitamos sua privacidade.
+                    </p>
+
+                    <p style="margin-top: 10px;">
+                        <a href="/privacidade.html">
+                            Política de Privacidade
+                        </a>
+                    </p>
+
+                </footer>
+
+            </form>
+        </section>
+    </main>
+
+</body>
+
+</html>
