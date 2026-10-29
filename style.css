@@ -1,4 +1,8 @@
-/* Configurações gerais */
+
+/* ==============================
+   CONFIGURAÇÕES GERAIS
+============================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -20,25 +24,98 @@ body {
     background: var(--fundo);
     color: var(--texto);
     min-height: 100vh;
+    line-height: 1.5;
 }
 
-.container {
+/* ==============================
+   CONTAINER E CARTÃO
+============================== */
+
+.container,
+.login-container {
     width: 100%;
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 32px 16px;
 }
 
+.cadastro-card,
+.login-container > h1,
+.login-container > h2,
+.login-container > form,
+.login-container > #mensagem,
+.login-container > .login-links {
+    width: 100%;
+    max-width: 460px;
+}
+
 .cadastro-card {
     background: #ffffff;
-    width: 100%;
-    max-width: 540px;
     padding: 36px;
     border-radius: 16px;
     box-shadow: 0 8px 35px rgba(20, 55, 32, 0.09);
 }
+
+/* Cartão visual do login */
+
+.login-container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.login-container > h1,
+.login-container > h2,
+.login-container > form,
+.login-container > #mensagem,
+.login-container > .login-links {
+    background: #ffffff;
+    padding-left: 28px;
+    padding-right: 28px;
+}
+
+.login-container > h1 {
+    padding-top: 30px;
+    border-radius: 16px 16px 0 0;
+    color: var(--verde);
+    font-size: 28px;
+    text-align: center;
+}
+
+.login-container > h2 {
+    padding-top: 8px;
+    padding-bottom: 22px;
+    color: var(--texto);
+    font-size: 21px;
+    text-align: center;
+    font-weight: normal;
+}
+
+.login-container > form {
+    padding-bottom: 20px;
+}
+
+.login-container > #mensagem {
+    padding-top: 0;
+    padding-bottom: 12px;
+    font-size: 14px;
+}
+
+.login-container > .login-links {
+    padding-top: 18px;
+    padding-bottom: 26px;
+    border-radius: 0 0 16px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    text-align: center;
+}
+
+/* ==============================
+   CABEÇALHO E LOGO
+============================== */
 
 .cabecalho {
     text-align: center;
@@ -70,20 +147,26 @@ body {
     line-height: 1.5;
 }
 
-/* Campos do formulário */
-.campo {
+/* ==============================
+   CAMPOS DOS FORMULÁRIOS
+============================== */
+
+.campo,
+.form-group {
     display: flex;
     flex-direction: column;
     margin-bottom: 19px;
 }
 
-.campo label {
+.campo label,
+.form-group label {
     font-size: 14px;
     font-weight: bold;
     margin-bottom: 8px;
 }
 
-.campo input {
+.campo input,
+.form-group input {
     width: 100%;
     min-height: 46px;
     border: 1px solid var(--borda);
@@ -96,12 +179,14 @@ body {
     transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.campo input:focus {
+.campo input:focus,
+.form-group input:focus {
     border-color: var(--verde);
-    box-shadow: 0 0 0 3px rgba(22, 131, 74, 0.12);
+    box-shadow: 0 0 0 3px rgba(12, 34, 160, 0.12);
 }
 
-.campo input::placeholder {
+.campo input::placeholder,
+.form-group input::placeholder {
     color: #9aa39d;
 }
 
@@ -118,7 +203,10 @@ body {
     margin: 24px 0;
 }
 
-/* Termos e consentimentos */
+/* ==============================
+   TERMOS E CONSENTIMENTOS
+============================== */
+
 .consentimentos {
     border: none;
     margin-bottom: 22px;
@@ -175,7 +263,10 @@ body {
     font-size: 12px;
 }
 
-/* Botão principal */
+/* ==============================
+   BOTÕES
+============================== */
+
 button[type="submit"] {
     width: 100%;
     min-height: 48px;
@@ -198,7 +289,27 @@ button[type="submit"]:disabled {
     cursor: not-allowed;
 }
 
-/* Mensagens */
+/* ==============================
+   LINKS
+============================== */
+
+.login-links a {
+    color: var(--verde);
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.login-links a:hover {
+    color: var(--verde-escuro);
+    text-decoration: underline;
+}
+
+/* ==============================
+   MENSAGENS
+============================== */
+
 .mensagem {
     display: none;
     margin: 0 0 18px;
@@ -229,11 +340,18 @@ button[type="submit"]:disabled {
     font-size: 14px;
 }
 
-/* Adaptação para telas pequenas */
+/* ==============================
+   RESPONSIVIDADE
+============================== */
+
 @media (max-width: 600px) {
+    .container,
+    .login-container {
+        padding: 20px 12px;
+    }
+
     .container {
-        padding: 16px 10px;
-        align-items: flex-start;
+        justify-content: flex-start;
     }
 
     .cadastro-card {
@@ -243,5 +361,18 @@ button[type="submit"]:disabled {
 
     .cabecalho h1 {
         font-size: 24px;
+    }
+
+    .login-container > h1 {
+        font-size: 25px;
+    }
+
+    .login-container > h1,
+    .login-container > h2,
+    .login-container > form,
+    .login-container > #mensagem,
+    .login-container > .login-links {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
