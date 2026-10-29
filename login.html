@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +12,6 @@
 </head>
 
 <body>
-
     <main class="container">
         <section class="cadastro-card">
 
@@ -28,38 +26,58 @@
                 </p>
             </header>
 
-            <form id="loginForm" action="/api/login" method="POST">
-
+            <form id="loginForm">
                 <div class="campo">
                     <label for="email">E-mail *</label>
 
-                    <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" autocomplete="email"
-                        maxlength="254" required>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="seuemail@exemplo.com"
+                        autocomplete="email"
+                        maxlength="254"
+                        required
+                    >
                 </div>
 
                 <div class="campo">
                     <label for="senha">Senha *</label>
 
-                    <input type="password" id="senha" name="senha" placeholder="Digite sua senha"
-                        autocomplete="current-password" required>
+                    <input
+                        type="password"
+                        id="senha"
+                        name="senha"
+                        placeholder="Digite sua senha"
+                        autocomplete="current-password"
+                        required
+                    >
                 </div>
 
                 <label class="opcao" for="lembrar">
-                    <input type="checkbox" id="lembrar" name="lembrar">
+                    <input
+                        type="checkbox"
+                        id="lembrar"
+                        name="lembrar"
+                    >
 
                     <span>Lembrar de mim neste dispositivo.</span>
                 </label>
 
                 <div class="separador"></div>
 
-                <p id="mensagem" class="mensagem" role="status" aria-live="polite"></p>
+                <p
+                    id="mensagem"
+                    class="mensagem"
+                    role="status"
+                    aria-live="polite"
+                ></p>
 
                 <button type="submit" id="btnLogin">
                     Entrar na minha conta
                 </button>
 
                 <footer class="rodape">
-
                     <p>
                         Esqueceu sua senha?
                         <a href="./cadastro.html">
@@ -69,25 +87,44 @@
 
                     <p style="margin-top: 16px;">
                         Ainda não tem uma conta?
-                        <a href="./cadastro.html">Criar minha conta</a>
+                        <a href="./cadastro.html">
+                            Criar minha conta
+                        </a>
                     </p>
 
                     <div class="separador"></div>
 
-                    <p>
-                        Respeitamos sua privacidade.
+                    <p>Respeitamos sua privacidade.</p>
+
+                    <p style="margin-top: 10px;">
+                        <a href="./privacidade.html">
+                            Política de Privacidade
+                        </a>
                     </p>
 
                     <p style="margin-top: 10px;">
-                        <a href="./privacidade.html">Política de Privacidade</a>
+                        <a href="./termos.html">
+                            Termos de Uso
+                        </a>
                     </p>
-
                 </footer>
-
             </form>
         </section>
     </main>
 
-</body>
+    <script>
+        // Demonstração visual: não realiza login real.
+        const formulario = document.getElementById("loginForm");
+        const mensagem = document.getElementById("mensagem");
 
+        formulario.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            mensagem.textContent =
+                "Este é um site de demonstração. O login ainda não está conectado a um servidor.";
+
+            mensagem.className = "mensagem erro";
+        });
+    </script>
+</body>
 </html>
